@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>زاد السيرة النبوية | رحلة علم ومعرفة</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+
+font-family: 'Cairo', sans-serif;
+
+background-color: #f8fafc;
+
+color: #1e293b;
+
+-webkit-tap-highlight-color: transparent;
+
+}
+
+.islamic-pattern {
+
+background-color: #064e3b;
+
+background-image: radial-gradient(#047857 0.75px, transparent 0.75px), radial-gradient(#047857 0.75px, #064e3b 0.75px);
+
+background-size: 30px 30px;
+
+background-position: 0 0, 15px 15px;
+
+}
+
+</style>
+
+</head>
+
+<body class="min-h-screen flex flex-col justify-between selection:bg-emerald-200 selection:text-emerald-900">
+
+​<header class="islamic-pattern text-white shadow-lg border-b-4 border-amber-500">
+
+<div class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center text-center md:text-right">
+
+<div>
+
+<h1 class="text-3xl font-black text-amber-400 tracking-wide">زاد السيرة النبوية</h1>
+
+<p class="text-emerald-100 text-sm font-semibold mt-1">رحلة علم ومعرفة بالاستناد إلى كتاب «الرحيق المختوم»</p>
+
+</div>
+
+<div class="mt-4 md:mt-0 bg-emerald-900/80 px-4 py-2 rounded-xl border border-amber-500/50 text-xs text-amber-200 shadow-inner">
+
+شعارنا: «نتعلّم السيرة، ونستضيء بأحداثها، ونتثبّت من معلوماتنا»
+
+</div>
+
+</div>
+
+</header>
+
+​<main class="flex-grow max-w-5xl mx-auto px-4 py-8 w-full">
+
+​<div id="home-view" class="space-y-8">
+
+<div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 text-center">
+
+<h2 class="text-2xl font-bold text-emerald-900 mb-3">مرحباً بك في بوابتك المعرفية لتعلّم السيرة العطرة</h2>
+
+<p class="text-slate-600 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
+
+تهدف هذه المنصة إلى تمكينك من دراسة أحداث السيرة النبوية ومراجعة تفاصيلها عبر أربعة مستويات معرفية متدرجة، مستمدة بدقة من كتاب «الرحيق المختوم» لفضيلة الشيخ صفي الرحمن المباركفوري، مع تفسيرات علمية موثقة.
+
+</p>
+
+<div class="mt-6 flex flex-wrap justify-center gap-4">
+
+<button type="button" onclick="switchView('levels-view')" class="bg-emerald-800 hover:bg-emerald-900 text-amber-300 font-bold px-8 py-3.5 rounded-xl shadow-md transition transform hover:-translate-y-0.5 text-base flex items-center gap-2 cursor-pointer">
+
+<span>ابدأ التعلّم والمراجعة</span>
+
+</button>
+
+<button type="button" onclick="switchView('progress-view')" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-6 py-3.5 rounded-xl transition text-base cursor-pointer">
+
+متابعة التقدّم وحصيلة المعرفة
+
+</button>
+
+</div>
+
+</div>
+
+​<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+<div onclick="startLevel(1)" class="bg-white p-6 rounded-2xl shadow-sm border-2 border-emerald-100 hover:border-amber-500 cursor-pointer transition transform hover:-translate-y-1">
+
+<div class="flex justify-between items-start mb-4">
+
+<span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">المستوى الأول</span>
+
+<span class="text-amber-600 font-bold text-sm">بدايات النور</span>
+
+</div>
+
+<h3 class="text-lg font-bold text-slate-800 mb-2">من النسب الشريف حتى بدء الوحي</h3>
+
+<p class="text-slate-600 text-xs leading-relaxed mb-4">نسب النبي ﷺ، مولده، طفولته، نشأته، شبابه قبل البعثة، زواجه بخديجة رضي الله عنها، وبدء الوحي.</p>
+
+</div>
+
+​<div onclick="startLevel(2)" class="bg-white p-6 rounded-2xl shadow-sm border-2 border-emerald-100 hover:border-amber-500 cursor-pointer transition transform hover:-translate-y-1">
+
+<div class="flex justify-between items-start mb-4">
+
+<span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">المستوى الثاني</span>
+
+<span class="text-amber-600 font-bold text-sm">معالم السيرة</span>
+
+</div>
+
+<h3 class="text-lg font-bold text-slate-800 mb-2">الدعوة الجهرية والهجرة إلى الحبشة</h3>
+
+<p class="text-slate-600 text-xs leading-relaxed mb-4">الدعوة السرية والجهرية، مواقف قريش، الهجرة إلى الحبشة، عام الحزن، الإسراء والمعراج، وبيعتا العقبة.</p>
+
+</div>
+
+​<div onclick="startLevel(3)" class="bg-white p-6 rounded-2xl shadow-sm border-2 border-emerald-100 hover:border-amber-500 cursor-pointer transition transform hover:-translate-y-1">
+
+<div class="flex justify-between items-start mb-4">
+
+<span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">المستوى الثالث</span>
+
+<span class="text-amber-600 font-bold text-sm">مواقف وأحداث</span>
+
+</div>
+
+<h3 class="text-lg font-bold text-slate-800 mb-2">العهد المدني والغزوات الكبرى</h3>
+
+<p class="text-slate-600 text-xs leading-relaxed mb-4">بناء المجتمع في المدينة، بدر، أحد، الخندق، صلح الحديبية، خيبر، فتح مكة، حنين، وتبوك.</p>
+
+</div>
+
+​<div onclick="startLevel(4)" class="bg-white p-6 rounded-2xl shadow-sm border-2 border-emerald-100 hover:border-amber-500 cursor-pointer transition transform hover:-translate-y-1">
+
+<div class="flex justify-between items-start mb-4">
+
+<span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full">المستوى الشامل</span>
+
+<span class="text-amber-600 font-bold text-sm">الإحاطة التامة</span>
+
+</div>
+
+<h3 class="text-lg font-bold text-slate-800 mb-2">الاختبار المعرفي الشامل لكتاب الرحيق المختوم</h3>
+
+<p class="text-slate-600 text-xs leading-relaxed mb-4">يغطي جميع فصول وموضوعات كتاب «الرحيق المختوم» من بدايته وحتى وفاته ﷺ بدقة عالية وتحليل عميق.</p>
+
+</div>
+
+</div>
+
+</div>
+
+​<div id="levels-view" class="hidden space-y-6">
+
+<div class="flex justify-between items-center bg-white p-4 rounded-2xl shadow-sm border border-slate-200">
+
+<h2 class="text-xl font-bold text-emerald-900">اختر مستوى التعلّم والمراجعة</h2>
+
+<button type="button" onclick="switchView('home-view')" class="text-sm font-semibold text-slate-600 hover:text-emerald-800 cursor-pointer">← العودة للقائمة الرئيسية</button>
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="levels-container"></div>
+
+</div>
+
+​<div id="quiz-view" class="hidden bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 max-w-3xl mx-auto">
+
+<div class="flex justify-between items-center mb-6 pb-4 border-b border-slate-100">
+
+<div>
+
+<span id="quiz-level-badge" class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">المستوى</span>
+
+<h3 id="quiz-title" class="text-lg font-bold text-slate-800 mt-2">عنوان الاختبار</h3>
+
+</div>
+
+<div class="text-left">
+
+<span class="text-xs text-slate-500 block">السؤال</span>
+
+<span id="current-q-num" class="text-lg font-bold text-emerald-800">1</span>
+
+<span class="text-xs text-slate-400">/ <span id="total-q-num">15</span></span>
+
+</div>
+
+</div>
+
+​<div class="w-full bg-slate-100 h-2.5 rounded-full mb-6 overflow-hidden">
+
+<div id="progress-bar" class="bg-emerald-600 h-full transition-all duration-300" style="width: 10%"></div>
+
+</div>
+
+​<div class="mb-6">
+
+<p id="question-text" class="text-base md:text-lg font-semibold text-slate-900 leading-relaxed"></p>
+
+<div id="question-meta" class="mt-2 text-xs text-slate-400 font-medium"></div>
+
+</div>
+
+​<div id="options-container" class="space-y-3 mb-6"></div>
+
+​<div id="feedback-box" class="hidden p-4 rounded-xl mb-6 text-sm">
+
+<div id="feedback-msg" class="font-bold mb-1"></div>
+
+<div id="feedback-explanation" class="text-slate-700 text-xs md:text-sm leading-relaxed"></div>
+
+</div>
+
+​<div class="flex justify-between items-center pt-4 border-t border-slate-100">
+
+<button type="button" onclick="switchView('home-view')" class="text-xs text-slate-500 hover:text-slate-700 font-semibold cursor-pointer">إلغاء والعودة</button>
+
+<button type="button" id="next-btn" onclick="nextQuestion()" class="hidden bg-emerald-800 hover:bg-emerald-900 text-white font-bold px-6 py-2.5 rounded-xl shadow transition text-sm cursor-pointer">السؤال التالي</button>
+
+</div>
+
+</div>
+
+​<div id="result-view" class="hidden bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 max-w-2xl mx-auto text-center space-y-6">
+
+<div class="w-20 h-20 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center mx-auto text-2xl font-black shadow-inner">
+
+<span id="result-score-percent">0%</span>
+
+</div>
+
+<div>
+
+<h3 id="result-desc" class="text-xl font-bold text-emerald-900 mb-1">نتيجة متميزة</h3>
+
+<p class="text-slate-500 text-xs">لقد أكملت هذا الاختبار بنجاح بناءً على كتاب الرحيق المختوم</p>
+
+</div>
+
+​<div class="grid grid-cols-3 gap-4 bg-slate-50 p-4 rounded-xl text-center border border-slate-100">
+
+<div>
+
+<span class="text-xs text-slate-400 block mb-1">إجمالي الأسئلة</span>
+
+<span id="res-total" class="text-base font-bold text-slate-800">0</span>
+
+</div>
+
+<div>
+
+<span class="text-xs text-slate-400 block mb-1">إجابات صحيحة</span>
+
+<span id="res-correct" class="text-base font-bold text-emerald-700">0</span>
+
+</div>
+
+<div>
+
+<span class="text-xs text-slate-400 block mb-1">تحتاج مراجعة</span>
+
+<span id="res-wrong" class="text-base font-bold text-amber-600">0</span>
+
+</div>
+
+</div>
+
+​<div class="flex flex-wrap justify-center gap-3 pt-4">
+
+<button type="button" onclick="restartLevel()" class="bg-emerald-800 hover:bg-emerald-900 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition cursor-pointer">إعادة الاختبار</button>
+
+<button type="button" onclick="reviewMistakes()" id="review-btn" class="hidden bg-amber-600 hover:bg-amber-700 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition cursor-pointer">مراجعة الإجابات الخاطئة</button>
+
+<button type="button" onclick="switchView('home-view')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-6 py-2.5 rounded-xl text-sm transition cursor-pointer">العودة للرئيسية</button>
+
+</div>
+
+</div>
+
+​<div id="progress-view" class="hidden bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 max-w-3xl mx-auto space-y-6">
+
+<div class="flex justify-between items-center pb-4 border-b border-slate-100">
+
+<h3 class="text-xl font-bold text-emerald-900">حصيلة المعرفة ومتابعة التقدّم</h3>
+
+<button type="button" onclick="switchView('home-view')" class="text-xs text-slate-500 hover:text-emerald-800 font-semibold cursor-pointer">← العودة</button>
+
+</div>
+
+<div class="space-y-4">
+
+<div class="bg-emerald-50 p-4 rounded-xl border border-emerald-100">
+
+<h4 class="font-bold text-emerald-900 text-sm mb-1">سجل التعلّم والمحاولات</h4>
+
+<p class="text-slate-600 text-xs">يتم حفظ تقدمك واجتيازك للمستويات محلياً على جهازك لتتبع مسيرتك في دراسة السيرة النبوية.</p>
+
+</div>
+
+<div id="stats-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+
+</div>
+
+</div>
+
+​</main>
+
+​<footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs mt-12">
+
+<div class="max-w-6xl mx-auto px-4 space-y-2">
+
+<p class="text-amber-400 font-semibold">زاد السيرة النبوية | رحلة علم ومعرفة</p>
+
+<p>جميع الأسئلة والتفسيرات مستمدة وموثقة من كتاب «الرحيق المختوم» لفضيلة الشيخ صفي الرحمن المباركفوري.</p>
+
+</div>
+
+</footer>
+
+​<script>
+
+const questionBank = {
+
+1: [
+
+{ q: "ما هو اسم جد النبي محمد ﷺ الذي كفله بعد وفاة أمه وجده عبد المطلب؟", options: ["أبو جهل", "أبو طالب", "العباس بن عبد المطلب", "حَمزة بن عبد المطلب"], correct: 1, explanation: "كفله عمه أبو طالب شقيق أبيه عبد الله. (الرحيق المختوم، ص 58)", source: "فصل: إلى عمه الشفيق" },
+
+{ q: "وُلد النبي محمد ﷺ في عام الفيل، وتحديداً في صبيحة يوم الإثنين من شهر ربيع الأول.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، ولد بشعب بني هاشم بمكة في صبيحة يوم الإثنين التاسع من شهر ربيع الأول. (الرحيق المختوم، ص 54)", source: "فصل: المولد" },
+
+{ q: "من هي أول مرضعة للنبي محمد ﷺ بعد أمه؟", options: ["حليمة السعدية", "ثويبة مولاة أبي لهب", "أم أيمن", "الشيماء بنت الحارث"], correct: 1, explanation: "أرضعته ثويبة مولاة أبي لهب. (الرحيق المختوم، ص 55)", source: "فصل: المولد" },
+
+{ q: "ما اسم القبيلة التي استرضع فيها النبي ﷺ في صغره؟", options: ["بنو تميم", "بنو سعد بن بكر", "بنو مخزوم", "بنو أسد"], correct: 1, explanation: "استرضعه عبد المطلب في بني سعد بن بكر وكانت حليمة السعدية مرضعته. (الرحيق المختوم، ص 55)", source: "فصل: في بني سعد" },
+
+{ q: "توفيت أم النبي ﷺ آمنة بنت وهب في الأبواء وهي راجعة من زيارة قبر زوجها.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، توفيت بالأبواء وعمره ست سنوات. (الرحيق المختوم، ص 57)", source: "فصل: إلى أمه الحنون" },
+
+{ q: "ما هو اللقب الذي أطلقته قريش على النبي محمد ﷺ قبل البعثة لصدقه وأمانته؟", options: ["الخطيب", "الأمين", "الكريم", "الحكيم"], correct: 1, explanation: "سماه قومه (الأمين). (الرحيق المختوم، ص 64)", source: "فصل: السيرة الإجمالية" },
+
+{ q: "كم كان عمر النبي ﷺ حين نزل عليه الوحي في غار حراء؟", options: ["ثلاثون سنة", "أربعون سنة", "خمسون سنة", "خمس وثلاثون سنة"], correct: 1, explanation: "تكامل له أربعون سنة قمرية. (الرحيق المختوم، ص 66)", source: "فصل: في ظلال النبوة" },
+
+{ q: "من هو ابن عم خديجة رضي الله عنها الذي استمع لقصة بدء الوحي وثبّت النبي ﷺ؟", options: ["أبو جهل", "ورقة بن نوفل", "عثمان بن عفان", "عتبة بن ربيعة"], correct: 1, explanation: "هو ورقة بن نوفل. (الرحيق المختوم، ص 67)", source: "فصل: جبريل ينزل بالوحي" },
+
+{ q: "شارك النبي محمد ﷺ في صغره وشبابه في بناء الكعبة وفي حرب الفجار.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، حضر حرب الفجار وكان ينبل على عمومته. (الرحيق المختوم، ص 59)", source: "فصل: حرب الفجار" },
+
+{ q: "ما هو الحلف العظيم الذي شهدته قريش قبل الإسلام وتعاقدوا فيه على نصرة المظلوم؟", options: ["حلف المطيبين", "حلف الفضول", "حلف الأحزاب", "حلف قريش"], correct: 1, explanation: "هو حلف الفضول في دار عبد الله بن جدعان. (الرحيق المختوم، ص 59)", source: "فصل: حلف الفضول" },
+
+{ q: "تزوج النبي ﷺ بالسيدة خديجة رضي الله عنها بعد عودته من رحلته التجارية إلى الشام بمالها.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، تم الزواج بعد رجوعه بشهرين. (الرحيق المختوم، ص 61)", source: "فصل: زواجه بخديجة" },
+
+{ q: "ما اسم الغار الذي كان يتحنث فيه النبي ﷺ ويتعبد قبل نزول الوحي؟", options: ["غار ثور", "غار حراء", "غار إله", "غار مكة"], correct: 1, explanation: "غار حراء في جبل النور. (الرحيق المختوم، ص 65)", source: "فصل: في غار حراء" },
+
+{ q: "عمرو بن لحي الخزاعي هو أول من أدخل الأصنام إلى مكة ودعا إلى عبادتها.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، ذكر المؤرخون أنه غير دين إبراهيم عليه السلام. (الرحيق المختوم، ص 35)", source: "فصل: ديانات العرب" },
+
+{ q: "من هو أول من أسلم من الرجال الأحرار من أصحاب النبي ﷺ؟", options: ["علي بن أبي طالب", "أبو بكر الصديق", "عثمان بن عفان", "زيد بن حارثة"], correct: 1, explanation: "أبو بكر الصديق رضي الله عنه. (الرحيق المختوم، ص 75)", source: "فصل: الرعيل الأول" },
+
+{ q: "دامت فترة الدعوة السرية بمكة المكرمة ثلاث سنوات كاملة.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، استمرت ثلاث سنوات. (الرحيق المختوم، ص 74-75)", source: "فصل: الدعوة السرية" }
+
+],
+
+2: [
+
+{ q: "في أي سنة من النبوة كانت الهجرة الأولى للمسلمين إلى الحبشة؟", options: ["السنة الثالثة", "السنة الخامسة", "السنة السابعة", "السنة العاشرة"], correct: 1, explanation: "في رجب سنة خمس من النبوة. (الرحيق المختوم، ص 92)", source: "فصل: الهجرة للحبشة" },
+
+{ q: "كان النجاشي ملك الحبشة ملكاً ظالماً قاسياً.", options: ["صح", "خطأ"], correct: 1, explanation: "خطأ، بل كان عادلاً يحسن جوار المهاجرين. (الرحيق المختوم، ص 92)", source: "فصل: مكيدة قريش" },
+
+{ q: "من هو الصحابي الجليل الذي تصدى للحديث ومناظرة النجاشي عن حقيقة الإسلام؟", options: ["عثمان بن عفان", "جعفر بن أبي طالب", "عمار بن ياسر", "بلال بن رباح"], correct: 1, explanation: "هو جعفر بن أبي طالب رضي الله عنه. (الرحيق المختوم، ص 95)", source: "فصل: مكيدة قريش" },
+
+{ q: "ما هو العام الذي توفي فيه أبو طالب والسيدة خديجة رضي الله عنها؟", options: ["السنة السابعة", "السنة العاشرة من النبوة", "السنة الثانية للهجرة", "عام الهجرة"], correct: 1, explanation: "سُمي عام الحزن في السنة العاشرة من النبوة. (الرحيق المختوم، ص 115)", source: "فصل: عام الحزن" },
+
+{ q: "وقعت حادثة الإسراء والمعراج في العهد المكي قبل الهجرة النبوية.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، وقعت في مرحلة متأخرة من العهد المكي. (الرحيق المختوم، ص 137)", source: "فصل: الإسراء والمعراج" },
+
+{ q: "كم عدد الصلوات التي فُرضت ليلة الإسراء والمعراج ابتداءً؟", options: ["عشر صلوات", "ثلاثون صلاة", "خمسون صلاة", "مائة صلاة"], correct: 2, explanation: "فُرِضت خمسون صلاة ثم خُففت إلى خمس. (الرحيق المختوم، ص 138)", source: "فصل: الإسراء والمعراج" },
+
+{ q: "من هو أول سفير للإسلام بعثه النبي ﷺ إلى المدينة المنورة؟", options: ["مصعب بن عمير", "معاذ بن جبل", "علي بن أبي طالب", "أبو بكر الصديق"], correct: 0, explanation: "أرسل مصعب بن عمير ليعلم الأنصار. (الرحيق المختوم، ص 144)", source: "فصل: سفير الإسلام" },
+
+{ q: "تمت بيعة العقبة الثانية بحضور وفد كبير من الأنصار.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، في السنة الثالثة عشرة من النبوة. (الرحيق المختوم، ص 147)", source: "فصل: بيعة العقبة الثانية" },
+
+{ q: "من هو الصحابي الجليل الذي كان إسلامه عزاً عظيماً للمسلمين وفاروقاً بين الحق والباطل؟", options: ["عثمان بن عفان", "عمر بن الخطاب", "حمزة بن عبد المطلب", "علي بن أبي طالب"], correct: 1, explanation: "هو عمر بن الخطاب رضي الله عنه. (الرحيق المختوم، ص 101)", source: "فصل: إسلام عمر" },
+
+{ q: "قاطعت قريش بني هاشم وبني المطلب في شعب أبي طالب مدة ثلاث سنوات.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، حتى أكلوا أوراق الشجر. (الرحيق المختوم، ص 109)", source: "فصل: المقاطعة العامة" },
+
+{ q: "من الذي تولى نقض صحيفة المقاطعة الظالمة من أشراف قريش؟", options: ["أبو جهل", "هشام بن عمرو ومن معه", "عتبة بن ربيعة", "أبو لهب"], correct: 1, explanation: "هشام بن عمرو ومن معه. (الرحيق المختوم، ص 110)", source: "فصل: نقض المقاطعة" },
+
+{ q: "استقبل أهل الطائف دعوة النبي ﷺ بالحسنى والنصرة.", options: ["صح", "خطأ"], correct: 1, explanation: "خطأ، بل آذوه أشد الأذى. (الرحيق المختوم، ص 125)", source: "فصل: الرسول في الطائف" },
+
+{ q: "كم عدد نقباء الأنصار الذين تم اختيارهم في بيعة العقبة الثانية؟", options: ["سبعة نقباء", "عشرة نقباء", "اثنا عشر نقيباً", "عشرون نقيباً"], correct: 2, explanation: "اثنا عشر نقيباً. (الرحيق المختوم، ص 151)", source: "فصل: النقباء" },
+
+{ q: "عتبة بن ربيعة فاوض النبي ﷺ وعرض عليه الأموال ليكف عن دعوته.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، فقرأ عليه النبي أول سورة فصلت. (الرحيق المختوم، ص 106)", source: "فصل: ممثل قريش" },
+
+{ q: "من هو مولى أبي بكر الذي كان يخفي آثار قدمي النبي ليلة الهجرة؟", options: ["بلال بن رباح", "عامر بن فهيرة", "زيد بن حارثة", "صهيب الرومي"], correct: 1, explanation: "عامر بن فهيرة رضي الله عنه. (الرحيق المختوم)", source: "فصل: الهجرة النبوية" },
+
+{ q: "كانت السيدة سودة بنت زمعة رضي الله عنها أول امرأة تزوجها النبي بعد خديجة.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، في شوال سنة عشر من النبوة. (الرحيق المختوم، ص 117)", source: "فصل: سودة بنت زمعة" },
+
+{ q: "التقى النبي ﷺ في الطائف بغلام نصراني يقال له...", options: ["عداس", "سلمان", "جبريل", "صهيب"], correct: 0, explanation: "هو عداس النصراني. (الرحيق المختوم، ص 126)", source: "فصل: الطائف" },
+
+{ q: "استمع نفر من الجن للقرآن الكريم أثناء رجوع النبي من الطائف.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، كما ورد في سورتي الأحقاف والجن. (الرحيق المختوم، ص 127)", source: "فصل: إسلام الجن" },
+
+{ q: "دخل النبي ﷺ مكة بعد الطائف في جوار...", options: ["المطعم بن عدي", "أبو جهل", "العباس", "أبو بكر"], correct: 0, explanation: "في جوار المطعم بن عدي. (الرحيق المختوم، ص 128)", source: "فصل: عودة النبي" },
+
+{ q: "بايع النسوان في بيعة العقبة الثانية بالمصافحة باليد.", options: ["صح", "خطأ"], correct: 1, explanation: "خطأ، لم يصافح امرأة قط بل كانت بالكلام. (الرحيق المختوم، ص 151)", source: "فصل: بيعة النساء" }
+
+],
+
+3: [
+
+{ q: "ما هي أول غزوة خاضها المسلمون في الإسلام في العهد المدني؟", options: ["غزوة أحد", "غزوة بدر الكبرى", "غزوة الخندق", "غزوة تبوك"], correct: 1, explanation: "غزوة بدر الكبرى في رمضان سنة 2 هـ.", source: "فصل: بدر" },
+
+{ q: "وقعت غزوة أحد في سنة ثلاث للهجرة واستشهد فيها حمزة بن عبد المطلب.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، في شوال سنة 3 هـ.", source: "فصل: أحد" },
+
+{ q: "ما هو الاسم الآخر لغزوة الخندق؟", options: ["بدر", "الأحزاب", "خيبر", "حنين"], correct: 1, explanation: "تسمى غزوة الأحزاب في السنة الخامسة.", source: "فصل: الخندق" },
+
+{ q: "تم عقد صلح الحديبية في السنة السادسة للهجرة.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، واعتبره القرآن فتحاً مبيناً.", source: "فصل: الحديبية" },
+
+{ q: "في أي سنة تم فتح مكة المكرمة ودخل الناس في دين الله أفواجاً؟", options: ["السنة السادسة", "السنة الثامنة", "السنة العاشرة", "السنة التاسعة"], correct: 1, explanation: "في رمضان سنة 8 هـ.", source: "فصل: فتح مكة" },
+
+{ q: "غزوة تبوك كانت آخر غزوة غزاها النبي ﷺ وكانت في عسرة شديدة.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، في رجب سنة 9 هـ.", source: "فصل: تبوك" },
+
+{ q: "من هو الصحابي الذي أشار بحفر الخندق حول المدينة المنورة؟", options: ["عمر", "سلمان الفارسي", "علي", "الزبير"], correct: 1, explanation: "سلمان الفارسي رضي الله عنه.", source: "فصل: الخندق" },
+
+{ q: "حجة الوداع هي الحجة الوحيدة التي حجها النبي ﷺ بعد فرض الحج.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، في السنة العاشرة للهجرة.", source: "فصل: حجة الوداع" },
+
+{ q: "في أي شهر وسنة توفي رسول الله ﷺ؟", options: ["رمضان 10 هـ", "ربيع الأول 11 هـ", "محرم 12 هـ", "صفر 11 هـ"], correct: 1, explanation: "في 12 ربيع الأول سنة 11 هـ.", source: "فصل: الوفاة" },
+
+{ q: "اليهود الذين نقضوا العهد يوم الخندق هم...", options: ["بنو قينقاع", "بنو النضير", "بنو قريظة", "يهود خيبر"], correct: 2, explanation: "بنو قريظة.", source: "فصل: بني قريظة" },
+
+{ q: "فُتحت حصون خيبر في السنة السابعة للهجرة.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، في محرم سنة 7 هـ.", source: "فصل: خيبر" },
+
+{ q: "ما اسم مؤلف كتاب الرحيق المختوم؟", options: ["ابن هشام", "صفي الرحمن المباركفوري", "ابن كثير", "محمد الغزالي"], correct: 1, explanation: "الشيخ صفي الرحمن المباركفوري.", source: "مقدمة الكتاب" },
+
+{ q: "عقد النبي ﷺ وثيقة المدينة فور هجرته لتنظيم التعايش.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، الدستور الأول بالمدينة.", source: "فصل: وثيقة المدينة" },
+
+{ q: "في غزوة حنين التقى المسلمون بقبائل هوازن وثقيف.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، بعد فتح مكة سنة 8 هـ.", source: "فصل: حنين" },
+
+{ q: "أرسل النبي رسائله إلى ملوك العالم في أواخر سنة...", options: ["الأولى", "السابعة بعد الحديبية", "العاشرة", "قبل الهجرة"], correct: 1, explanation: "في مستهل سنة 7 هـ.", source: "فصل: الرسائل للملوك" },
+
+{ q: "سرية مؤتة كانت في سنة ثامنة للهجرة واستشهد فيها القادة.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، زيد وجعفر وعبد الله بن رواحة.", source: "فصل: مؤتة" },
+
+{ q: "من هو الصحابي الذي أخذ الراية في مؤتة وسمي سيف الله المسلول؟", options: ["علي", "خالد بن الوليد", "أبو عبيدة", "سعد"], correct: 1, explanation: "خالد بن الوليد رضي الله عنه.", source: "فصل: مؤتة" },
+
+{ q: "توفي إبراهيم ابن النبي من مارية القبطية في صغره.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، في العام العاشر للهجرة.", source: "فصل: وفاة إبراهيم" },
+
+{ q: "نام على فراش النبي ليلة الهجرة ليخدي المشركين:", options: ["أبو بكر", "علي بن أبي طالب", "عمر", "بلال"], correct: 1, explanation: "علي بن أبي طالب رضي الله عنه.", source: "فصل: الهجرة" },
+
+{ q: "دخل النبي وأبو بكر غار ثور ومكثا فيه ثلاثة أيام.", options: ["صح", "خطأ"], correct: 0, explanation: "صح، حتى هدأت طلبات قريش.", source: "فصل: غار ثور" }
+
+],
+
+4: [
+
+{ q: "تقع جزيرة العرب بين قارات العالم القديم ويحدها غرباً البحر الأحمر.", options: ["صح", "خطأ"], correct: 0, explanation: "صح. (الرحيق المختوم، ص 15)", source: "فصل: موقع العرب" },
+
+{ q: "كيف قسم المؤرخون أقوام العرب بحسب السلالات؟", options: ["قسمين", "ثلاثة: البائدة، العاربة، والمستعربة", "أربعة", "قسم واحد"], correct: 1, explanation: "ثلاثة أقسام. (الرحيق المختوم، ص 16)", source: "فصل: أقوام العرب" },
+
+{ q: "عدنان هو الجد الحادي والعشرون في سلسلة النسب النبوي المتفق عليه.", options: ["صح", "خطأ"], correct: 0, explanation: "صح. (الرحيق المختوم، ص 20)", source: "فصل: النسب" },
+
+{ q: "تأسست دار الندوة بمكة المكرمة على يد قصي بن كلاب.", options: ["صح", "خطأ"], correct: 0, explanation: "صح. (الرحيق المختوم، ص 30)", source: "فصل: دار الندوة" },
+
+{ q: "من هو قائد جيش الفيلة الذي أهلكه الله بطير أبابيل؟", options: ["أبو جهل", "أبرهة الحبشي", "النجاشي", "بختنصر"], correct: 1, explanation: "أبرهة الحبشي. (الرحيق المختوم، ص 51)", source: "فصل: عام الفيل" },
+
+{ q: "تعرضت بئر زمزم للاندثار قبل أن يحفرها عبد المطلب من جديد.", options: ["صح", "خطأ"], correct: 0, explanation: "صح. (الرحيق المختوم، ص 51)", source: "فصل: حفر زمزم" },
+
+{ q: "حلف الفضول انعقد لنصرة المظلوم وشهدده النبي قبل البعثة.", options: ["صح", "خطأ"], correct: 0, explanation: "صح. (الرحيق المختوم، ص 59)", source: "فصل: حلف الفضول" },
+
+{ q: "قامت قريش بتجديد بناء الكعبة قبل البعثة بخمس سنوات.", options: ["صح", "خطأ"], correct: 0, explanation: "صح. (الرحيق المختوم، ص 61)", source: "فصل: بناء الكعبة" },
+
+{ q: "من هو الصحابي الذي عُذب في رمضاء مكة وكان يقول أحد أحد؟", options: ["عمار", "بلال بن رباح", "خباب", "صهيب"], correct: 1, explanation: "بلال بن رباح رضي الله عنه. (الرحيق المختوم، ص 90)", source: "فصل: الاضطهادات" },
+
+{ q: "من هي أول شهيدة في الإسلام أم عمار بن ياسر؟", options: ["سمية بنت خياط", "فاطمة", "أسماء", "لبينة"], correct: 0, explanation: "سمية بنت خياط رضي الله عنها. (الرحيق المختوم، ص 90)", source: "فصل: الشهيدة الأولى" },
+
+{ q: "استمرت مقاطعة بني هاشم في الشعب ثلاث سنوات.", options: ["صح", "خطأ"], correct: 0, explanation: "صح. (الرحيق المختوم، ص 110)", source: "فصل: المقاطعة" },
+
+{ q: "من هو الراهب الذي التقى بالنبي في صباه بالشام وعرف خاتم نبوته؟", options: ["سطيح", "بحيرا الراهب", "ورقة", "عداس"], correct: 1, explanation: "بحيرا الراهب. (الرحيق المختوم، ص 58)", source: "فصل: بحيرا" },
+
+{ q: "شهد النبي حرب الفجار وكان عمره خمس عشرة سنة.", options: ["صح", "خطأ"], correct: 0, explanation: "صح. (الرحيق المختوم، ص 59)", source: "فصل: حرب الفجار" },
+
+{ q: "سُمي عام وفاة أبي طالب وخديجة بـ...", options: ["عام الفيل", "عام الحزن", "عام الوفود", "عام الهجرة"], correct: 1, explanation: "عام الحزن. (الرحيق المختوم، ص 116)", source: "فصل: عام الحزن" },
+
+{ q: "كانت الهجرة الأولى للحبشة في رجب سنة 5 برئاسة عثمان بن عفان.", options: ["صح", "خطأ"], correct: 0, explanation: "صح ومعه زوجه رقية. (الرحيق المختوم، ص 92)", source: "فصل: الهجرة للحبشة" },
+
+{ q: "بلغ عدد المهاجرين في الهجرة الثانية للحبشة تقريباً...", options: ["عشرة", "خمسون", "ثلاثة وثمانون رجلاً", "مائة"], correct: 2, explanation: "83 رجلاً. (الرحيق المختوم، ص 94)", source: "فصل: الهجرة الثانية" },
+
+{ q: "دعا النبي على سادات قريش فصرعوا في قليب بدر.", options: ["صح", "خطأ"], correct: 0, explanation: "صح. (الرحيق المختوم، ص 87)", source: "فصل: المجابهة" },
+
+{ q: "الشاعر الذي وفد وقابل النبي وأسلم ودعا دوس فأسلموا هو...", options: ["حسان", "طفيل بن عمرو الدوسي", "نابغة", "عنترة"], correct: 1, explanation: "طفيل بن عمرو الدوسي. (الرحيق المختوم، ص 133)", source: "فصل: إسلام طفيل" },
+
+{ q: "أول من بايع النبي في بيعة العقبة الثانية من الأنصار قيل هو...", options: ["أسعد بن زرارة", "عبادة", "معاذ", "سعد"], correct: 0, explanation: "أسعد بن زرارة. (الرحيق المختوم، ص 151)", source: "فصل: بيعة العقبة" },
+
+{ q: "السورة التي نزلت وصورت أحداث الإسراء والمعراج في بدايتها هي سورة...", options: ["الكهف", "الإسراء", "النجم", "الفتح"], correct: 1, explanation: "سورة الإسراء. (الرحيق المختوم، ص 141)", source: "فصل: الإسراء والمعراج" }
+
+]
+
+};
+
+​let currentLevel = 1, currentQuestions = [], currentIndex = 0, userAnswers = [], score = 0;
+
+​function switchView(viewId) {
+
+document.getElementById('home-view').classList.add('hidden');
+
+document.getElementById('levels-view').classList.add('hidden');
+
+document.getElementById('quiz-view').classList.add('hidden');
+
+document.getElementById('result-view').classList.add('hidden');
+
+document.getElementById('progress-view').classList.add('hidden');
+
+​const target = document.getElementById(viewId);
+
+if (target) {
+
+target.classList.remove('hidden');
+
+window.scrollTo({ top: 0, behavior: 'smooth' });
+
+if (viewId === 'levels-view') renderLevelsList();
+
+else if (viewId === 'progress-view') renderProgressStats();
+
+}
+
+}
+
+​function renderLevelsList() {
+
+const container = document.getElementById('levels-container');
+
+if (!container) return;
+
+const levelsInfo = [
+
+{ id: 1, title: "المستوى الأول: بدايات النور", desc: "نسب النبي ﷺ، مولده، طفولته، نشأته، شبابه، وبدء الوحي.", count: questionBank[1].length },
+
+{ id: 2, title: "المستوى الثاني: معالم السيرة", desc: "الدعوة الجهرية، الهجرة للحبشة، عام الحزن، الإسراء والمعراج.", count: questionBank[2].length },
+
+{ id: 3, title: "المستوى الثالث: مواقف وأحداث", desc: "العهد المدني، الغزوات الكبرى (بدر، أحد، الخندق، فتح مكة).", count: questionBank[3].length },
+
+{ id: 4, title: "المستوى الرابع: الإحاطة الشاملة", desc: "الاختبار الشامل المتقدم لكتاب الرحيق المختوم.", count: questionBank[4].length }
+
+];
+
+container.innerHTML = levelsInfo.map(lvl => <div onclick="startLevel(${lvl.id})" class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-emerald-600 cursor-pointer transition"> <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">المستوى ${lvl.id}</span> <h3 class="text-base font-bold text-slate-800 mt-2 mb-1">${lvl.title}</h3> <p class="text-slate-600 text-xs leading-relaxed mb-4">${lvl.desc}</p> <div class="flex justify-between items-center text-xs text-slate-400 font-semibold pt-3 border-t border-slate-100"> <span>بنك الأسئلة (${lvl.count} سؤالاً)</span> <span class="text-emerald-700 font-bold">ابدأ التحدي &larr;</span> </div> </div>).join('');
+
+}
+
+​function startLevel(levelId) {
+
+currentLevel = levelId;
+
+currentQuestions = [...(questionBank[levelId] || [])];
+
+currentQuestions.sort(() => Math.random() - 0.5);
+
+currentIndex = 0;
+
+userAnswers = [];
+
+score = 0;
+
+switchView('quiz-view');
+
+document.getElementById('quiz-title').innerText = المستوى ${levelId}: ${getLevelTitle(levelId)};
+
+document.getElementById('quiz-level-badge').innerText = مستوى ${levelId};
+
+document.getElementById('total-q-num').innerText = currentQuestions.length;
+
+loadQuestion();
+
+}
+
+​function getLevelTitle(id) {
+
+switch(id) {
+
+case 1: return "بدايات النور (من النسب حتى الوحي)";
+
+case 2: return "معالم السيرة (الدعوة والهجرة للإسراء)";
+
+case 3: return "مواقف وأحداث (العهد المدني والغزوات)";
+
+case 4: return "الإحاطة المعرفية الشاملة للرحيق المختوم";
+
+default: return "";
+
+}
+
+}
+
+​function loadQuestion() {
+
+if (!currentQuestions || currentQuestions.length === 0) return;
+
+const q = currentQuestions[currentIndex];
+
+document.getElementById('current-q-num').innerText = currentIndex + 1;
+
+document.getElementById('question-text').innerText = q.q;
+
+document.getElementById('question-meta').innerText = المصدر: ${q.source || 'كتاب الرحيق المختوم'};
+
+document.getElementById('progress-bar').style.width = ${((currentIndex + 1) / currentQuestions.length) * 100}%;
+
+​const optionsContainer = document.getElementById('options-container');
+
+optionsContainer.innerHTML = '';
+
+q.options.forEach((opt, idx) => {
+
+const btn = document.createElement('button');
+
+btn.type = 'button';
+
+btn.className = "w-full text-right p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-emerald-50 hover:border-emerald-300 font-medium text-slate-700 transition text-sm flex items-center justify-between cursor-pointer";
+
+btn.innerHTML = <span>${opt}</span> <span class="w-5 h-5 rounded-full border border-slate-300 inline-flex items-center justify-center text-xs"></span>;
+
+btn.onclick = () => selectAnswer(idx);
+
+optionsContainer.appendChild(btn);
+
+});
+
+document.getElementById('feedback-box').classList.add('hidden');
+
+document.getElementById('next-btn').classList.add('hidden');
+
+}
+
+​function selectAnswer(selectedIdx) {
+
+const q = currentQuestions[currentIndex];
+
+const isCorrect = (selectedIdx === q.correct);
+
+if (isCorrect) score++;
+
+userAnswers.push({ question: q.q, selected: q.options[selectedIdx], correctAnswer: q.options[q.correct], isCorrect: isCorrect, explanation: q.explanation });
+
+​const buttons = document.getElementById('options-container').children;
+
+for (let i = 0; i < buttons.length; i++) {
+
+buttons[i].disabled = true;
+
+if (i === q.correct) {
+
+buttons[i].className = "w-full text-right p-4 rounded-xl border border-emerald-500 bg-emerald-100 font-bold text-emerald-900 transition text-sm flex items-center justify-between";
+
+} else if (i === selectedIdx && !isCorrect) {
+
+buttons[i].className = "w-full text-right p-4 rounded-xl border border-rose-400 bg-rose-100 text-rose-900 transition text-sm flex items-center justify-between";
+
+}
+
+}
+
+const feedbackBox = document.getElementById('feedback-box');
+
+feedbackBox.classList.remove('hidden');
+
+feedbackBox.className = isCorrect ? "p-4 rounded-xl mb-6 text-sm bg-emerald-50 border border-emerald-200 text-emerald-900 shadow-sm" : "p-4 rounded-xl mb-6 text-sm bg-amber-50 border border-amber-200 text-amber-900 shadow-sm";
+
+document.getElementById('feedback-msg').innerText = isCorrect ? "إجابة صحيحة، أحسنت." : "الإجابة تحتاج إلى مراجعة، إليك التوضيح العلمي:";
+
+document.getElementById('feedback-explanation').innerText = q.explanation;
+
+​const nextBtn = document.getElementById('next-btn');
+
+nextBtn.classList.remove('hidden');
+
+nextBtn.innerText = currentIndex === currentQuestions.length - 1 ? "عرض النتيجة النهائية" : "السؤال التالي";
+
+}
+
+​function nextQuestion() {
+
+currentIndex++;
+
+if (currentIndex < currentQuestions.length) loadQuestion();
+
+else showResults();
+
+}
+
+​function showResults() {
+
+switchView('result-view');
+
+const total = currentQuestions.length, correct = score, wrong = total - correct, percent = Math.round((correct / total) * 100);
+
+document.getElementById('result-score-percent').innerText = ${percent}%;
+
+document.getElementById('res-total').innerText = total;
+
+document.getElementById('res-correct').innerText = correct;
+
+document.getElementById('res-wrong').innerText = wrong;
+
+document.getElementById('result-desc').innerText = percent >= 80 ? "نتيجة متميزة استثنائية، بارك الله في علمك!" : "تقدم جيد في التعلّم، نوصي بمراجعة التفاصيل.";
+
+if (wrong > 0) document.getElementById('review-btn').classList.remove('hidden');
+
+else document.getElementById('review-btn').classList.add('hidden');
+
+saveProgressToStorage(currentLevel, percent);
+
+}
+
+​function restartLevel() { startLevel(currentLevel); }
+
+​function reviewMistakes() {
+
+const wrongs = userAnswers.filter(a => !a.isCorrect);
+
+if (wrongs.length === 0) { switchView('home-view'); return; }
+
+switchView('quiz-view');
+
+document.getElementById('quiz-title').innerText = "مراجعة الأسئلة التي تحتاج إلى تثبيت";
+
+document.getElementById('quiz-level-badge').innerText = "مراجعة الأخطاء";
+
+let reviewIdx = 0;
+
+function loadReviewItem() {
+
+const item = wrongs[reviewIdx];
+
+document.getElementById('current-q-num').innerText = reviewIdx + 1;
+
+document.getElementById('total-q-num').innerText = wrongs.length;
+
+document.getElementById('question-text').innerText = item.question;
+
+document.getElementById('options-container').innerHTML = <div class="space-y-2 text-sm"><div class="p-3.5 bg-rose-50 border border-rose-200 rounded-xl text-rose-900"><strong>إجابتك:</strong> ${item.selected}</div><div class="p-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-900"><strong>الصحيحة:</strong> ${item.correctAnswer}</div></div>;
+
+document.getElementById('feedback-box').classList.remove('hidden');
+
+document.getElementById('feedback-msg').innerText = "التوضيح العلمي:";
+
+document.getElementById('feedback-explanation').innerText = item.explanation;
+
+const nextBtn = document.getElementById('next-btn');
+
+nextBtn.classList.remove('hidden');
+
+nextBtn.innerText = reviewIdx < wrongs.length - 1 ? "السؤال التالي" : "إنهاء المراجعة";
+
+nextBtn.onclick = () => {
+
+if (reviewIdx < wrongs.length - 1) { reviewIdx++; loadReviewItem(); }
+
+else switchView('home-view');
+
+};
+
+}
+
+loadReviewItem();
+
+}
+
+​function saveProgressToStorage(level, percent) {
+
+let progress = JSON.parse(localStorage.getItem('zad_sira_progress') || '{}');
+
+progress[level] = Math.max(progress[level] || 0, percent);
+
+localStorage.setItem('zad_sira_progress', JSON.stringify(progress));
+
+}
+
+​function renderProgressStats() {
+
+const progress = JSON.parse(localStorage.getItem('zad_sira_progress') || '{}');
+
+const container = document.getElementById('stats-container');
+
+if (!container) return;
+
+container.innerHTML = [1,2,3,4].map(i => <div class="bg-white p-4 rounded-xl border border-slate-200 flex justify-between items-center shadow-sm"> <div> <span class="text-xs font-bold text-slate-400 block mb-0.5">المستوى ${i}</span> <h5 class="text-sm font-bold text-slate-800">${getLevelTitle(i)}</h5> </div> <span class="text-xs font-bold px-3 py-1.5 rounded-lg ${progress[i] !== undefined ? "text-emerald-700 bg-emerald-50 border border-emerald-200" : "text-slate-400 bg-slate-50 border border-slate-200"}">${progress[i] !== undefined ?${progress[i]}%: "لم يُجتز"}</span> </div>).join('');
+
+}
+
+</script>
+
+</body>
+
+</html>
+
